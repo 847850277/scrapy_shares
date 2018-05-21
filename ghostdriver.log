@@ -1,0 +1,19 @@
+[INFO  - 2018-05-21T09:37:18.217Z] GhostDriver - Main - running on port 53974
+[INFO  - 2018-05-21T09:37:19.215Z] Session [8e233ca0-5cda-11e8-8f67-3700eae54757] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-05-21T09:37:19.215Z] Session [8e233ca0-5cda-11e8-8f67-3700eae54757] - page.customHeaders:  - {}
+[INFO  - 2018-05-21T09:37:19.215Z] Session [8e233ca0-5cda-11e8-8f67-3700eae54757] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-05-21T09:37:19.215Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 8e233ca0-5cda-11e8-8f67-3700eae54757
+[ERROR - 2018-05-21T09:37:22.282Z] Session [8e233ca0-5cda-11e8-8f67-3700eae54757] - page.onError - msg: [Error]: Error while trying to access the //erebor.douban.com/?unit=dale_movie_doulist_top_right&bid=xro_yjXWpgQ&crtr=3%3A%2Fdoulist%2F2772079%2F%3Fstart%3D475%26amp%3Bsort%3Dseq%26amp%3Bsub_type%3D&ts=1526895442279&callback=erebor_567FF5291A49424B84020A59DA40D4F5
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-05-21T09:37:22.283Z] Session [8e233ca0-5cda-11e8-8f67-3700eae54757] - page.onError - stack:
+  (anonymous function) (https://img3.doubanio.com/f/adjs/cdc904d1376a43e44bbf399a0aff51973016cd77/ad.release.js:1)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-05-21T09:37:22.283Z] Session [8e233ca0-5cda-11e8-8f67-3700eae54757] - page.onError - msg: [Error]: Error while trying to access the //erebor.douban.com/?unit=dale_doulist_bottom&bid=xro_yjXWpgQ&crtr=3%3A%2Fdoulist%2F2772079%2F%3Fstart%3D475%26amp%3Bsort%3Dseq%26amp%3Bsub_type%3D&ts=1526895442280&callback=erebor_A055037877EB42418F133174A0146AF6
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-05-21T09:37:22.283Z] Session [8e233ca0-5cda-11e8-8f67-3700eae54757] - page.onError - stack:
+  (anonymous function) (https://img3.doubanio.com/f/adjs/cdc904d1376a43e44bbf399a0aff51973016cd77/ad.release.js:1)
+
+  phantomjs://platform/console++.js:263 in error
