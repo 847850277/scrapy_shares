@@ -7,6 +7,7 @@
 
 
 import MySQLdb
+import redis
 import datetime
 
 DEBUG = True
@@ -39,7 +40,9 @@ class DoubanPipline(object):
         # 清空表：
         self.cursor.execute("truncate table douban;")
         self.conn.commit()
-        print("bbbbbbbbb")
+
+        #redis链接
+        self.Redis_conn = redis.Redis(host='59.110.158.56', port=6379, db=0)
 
 
 
@@ -62,5 +65,19 @@ class DoubanPipline(object):
 
         except MySQLdb.Error, e:
             print "Error %d: %s" % (e.args[0], e.args[1])
+
+
+
+
+
+        try:
+            print('begin insert into redis')
+            self.Redis_conn.lpush('movies',item)
+            print('end insert into redis')
+
+        except redis.Error, e:
+            print "Error %d: %s" % (e.args[0], e.args[1])
+
+
 
         return item

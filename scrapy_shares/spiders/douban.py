@@ -29,8 +29,6 @@ class douban(scrapy.Spider):
         'https://www.douban.com/doulist/2772079/?start=450&sort=seq&sub_type=',
         'https://www.douban.com/doulist/2772079/?start=475&sort=seq&sub_type=',
         'https://www.douban.com/doulist/2772079/?start=500&sort=seq&sub_type='
-
-
     ]
     def parse(self, response):
         for movie in response.xpath('//*[@class="bd doulist-subject"]'):
