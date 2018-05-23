@@ -75,6 +75,10 @@ DOWNLOADER_MIDDLEWARES = {
 #    'scrapy_shares.pipelines.ScrapySharesPipeline': 300,
 #}
 
+ITEM_PIPELINES = {
+    'scrapy_shares.pipelines.DoubanPipline': 300,
+}
+
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True

@@ -19,3 +19,27 @@ class DmozItem(scrapy.Item):
     link = scrapy.Field()
     desc = scrapy.Field()
 
+
+
+#豆瓣实体类
+class DoubanItem(scrapy.Item):
+    title = scrapy.Field()
+    url = scrapy.Field()
+    time = scrapy.Field()
+    director = scrapy.Field()
+    score = scrapy.Field()
+
+    def __str__(self):
+        return super(DoubanItem, self).__str__()
+
+
+
+
+'''
+if __name__ == '__main__':
+    doubanItem = DoubanItem()
+    doubanItem.director = 'aaa'
+    print(doubanItem)
+'''
+
+

@@ -1,8 +1,11 @@
 import  scrapy
+from scrapy import Selector
+
+from scrapy_shares.items import DoubanItem
 
 
 class douban(scrapy.Spider):
-    name = "movie"
+    name = "douban"
     allowed_domains = ["https://movie.douban.com"]
     start_urls = [
         'https://www.douban.com/doulist/2772079/?start=0&sort=seq&sub_type=',
@@ -27,11 +30,16 @@ class douban(scrapy.Spider):
         'https://www.douban.com/doulist/2772079/?start=475&sort=seq&sub_type=',
         'https://www.douban.com/doulist/2772079/?start=500&sort=seq&sub_type='
 
-    ]
 
+    ]
     def parse(self, response):
-        movienames = response.xpath('//*[@class="doulist-item"]/div/div[2]/div[3]/a')
-        for movie in movienames:
-            print(movie.extract())
-            #print(type(movie))
-            #print(dir(movie))
+        for movie in response.xpath('//*[@class="bd doulist-subject"]'):
+            douban = DoubanItem()
+            movieText = movie.extract()
+            print(movieText)
+            douban['title'] = Selector(text=movieText).xpath('//*[@class="title"]/a/text()').extract()[0]
+            douban['time'] = Selector(text=movieText).xpath('//*[@class="abstract"]/text()[5]').extract()[0]
+            douban['url'] = Selector(text=movieText).xpath('//*[@class="title"]/a/@href').extract()[0]
+            douban['director'] = Selector(text=movieText).xpath('//*[@class="abstract"]/text()[1]').extract()[0]
+            douban['score'] = Selector(text=movieText).xpath('//*[@class="rating_nums"]/text()[1]').extract()[0]
+            yield douban
